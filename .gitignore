@@ -1,0 +1,8 @@
+.vscode
+test
+build*
+
+#executable names
+templates
+iter
+array
