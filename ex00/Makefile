@@ -2,7 +2,7 @@
 # Basics                                                                       #
 ################################################################################
 
-NAME = templates
+NAME = easyfind
 CPP = c++
 CPPFLAGS = -Wall -Werror -Wextra -MMD
 CCDEBUG = -g

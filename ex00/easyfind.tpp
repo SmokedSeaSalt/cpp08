@@ -8,6 +8,7 @@ template<typename T> int& easyfind(T container, int value)
 		if (container[i] == value)
 			return container[i];
 	}
+	return nullptr;
 }
 
 #endif // EASYFIND_HPP
