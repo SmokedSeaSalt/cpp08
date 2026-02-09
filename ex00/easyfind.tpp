@@ -1,14 +1,14 @@
 #ifndef EASYFIND_TPP
 #define EASYFIND_TPP
 
-template<typename T> int& easyfind(T container, int value)
+template<typename T> typename T::iterator easyfind(T& container, int value)
 {
-	for (unsigned int i = 0; i < container.size(); i++)
+	for (typename T::iterator it = container.begin(); it != container.end(); it++)
 	{
-		if (container[i] == value)
-			return container[i];
+		if (*it == value)
+			return it;
 	}
-	return nullptr;
+	return container.end();
 }
 
 #endif // EASYFIND_HPP
