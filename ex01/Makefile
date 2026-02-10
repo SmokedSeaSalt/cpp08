@@ -13,7 +13,8 @@ CCDEBUG = -g
 
 BUILD_DIR = build
 
-SRC = 	main.cpp
+SRC = 	main.cpp \
+		Span.cpp
 
 OBJ = $(patsubst %.cpp,$(BUILD_DIR)/%.o,$(SRC))
 DEP = ${OBJ:.o=.d}
