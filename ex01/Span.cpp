@@ -1,6 +1,6 @@
 #include "Span.hpp"
 #include <algorithm>
-#include <limits.h>
+#include <climits>
 
 Span::Span() : maxSpan_(0) {}
 Span::Span(unsigned int N) : maxSpan_(N) {}
