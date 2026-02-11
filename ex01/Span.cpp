@@ -9,7 +9,8 @@ Span::~Span() {}
 
 Span::Span(const Span& other) : maxSpan_(other.maxSpan_)
 {
-    // do deep copy
+    for (const int& x : other.span_)
+		this->span_.push_back(x);
 }
 
 Span& Span::operator=(const Span& other)

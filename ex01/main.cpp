@@ -90,4 +90,14 @@ int main()
         std::cout << sp.shortestSpan() << std::endl;
         std::cout << sp.longestSpan() << std::endl;
     }
+    {
+        std::cout << C_YELLOW << "Test copy\n" << C_END;
+        Span             sp     = Span(5);
+        std::vector<int> range  = {6, 3, 17, 9, 11};
+        sp.addRange(range);
+        Span copy = Span(sp);
+
+        std::cout << copy.shortestSpan() << std::endl;
+        std::cout << copy.longestSpan() << std::endl;
+    }
 }
