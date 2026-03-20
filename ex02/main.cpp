@@ -1,9 +1,11 @@
 #include "MutantStack.hpp"
+#include "terminalOutput.hpp"
 #include <iostream>
 #include <list>
 
 int main()
 {
+    std::cout << C_YELLOW << "Default test\n" << C_END;
     {
         MutantStack<int> mstack;
         mstack.push(5);
@@ -14,7 +16,6 @@ int main()
         mstack.push(3);
         mstack.push(5);
         mstack.push(737);
-        //[...]
         mstack.push(0);
         MutantStack<int>::iterator it  = mstack.begin();
         MutantStack<int>::iterator ite = mstack.end();
@@ -27,7 +28,8 @@ int main()
         }
         std::stack<int> s(mstack);
     }
-        {
+    std::cout << C_YELLOW << "Test list\n" << C_END;
+    {
         std::list<int> mstack;
         mstack.push_back(5);
         mstack.push_back(17);
@@ -37,7 +39,6 @@ int main()
         mstack.push_back(3);
         mstack.push_back(5);
         mstack.push_back(737);
-        //[...]
         mstack.push_back(0);
         std::list<int>::iterator it  = mstack.begin();
         std::list<int>::iterator ite = mstack.end();
