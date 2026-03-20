@@ -6,15 +6,14 @@
 template <typename T> class MutantStack : public std::stack<T>
 {
     public:
-        typedef typename std::deque<T>::iterator iterator;
-        typedef typename std::deque<T>::const_iterator const_iterator;
-		typedef int intager;
-		using intager = int;
+        typedef typename std::stack<T>::container_type container_type;
+        typedef typename container_type::iterator iterator;
+        typedef typename container_type::const_iterator const_iterator;
 
-        typename std::deque<T>::iterator       begin();
-        typename std::deque<T>::const_iterator begin() const;
-        typename std::deque<T>::iterator       end();
-        typename std::deque<T>::const_iterator end() const;
+        iterator       begin();
+        const_iterator begin() const;
+        iterator       end();
+        const_iterator end() const;
 
     private:
 };
