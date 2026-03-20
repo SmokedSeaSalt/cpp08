@@ -63,6 +63,13 @@ int Span::longestSpan()
     return (max - min);
 }
 
+void Span::addRange(std::vector<int> range)
+{
+    if (range.size() + this->span_.size() > maxSpan_)
+        throw SpanFull();
+    this->span_.insert(span_.end(), range.begin(), range.end());
+}
+
 const char* Span::SpanFull::what() const noexcept
 {
     return "Span::SpanFull: Not enough room in span to add input!\n";

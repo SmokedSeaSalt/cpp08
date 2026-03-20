@@ -15,7 +15,7 @@ class Span
 
         void addNumber(int number);
 
-        template <class T> void addRange(T range);
+        void addRange(std::vector<int> range);
 
         class SpanFull : public std::exception
         {
@@ -34,12 +34,5 @@ class Span
 
         Span();
 };
-
-template <class T> void Span::addRange(T range)
-{
-    if (range.size() + this->span_.size() > maxSpan_)
-        throw SpanFull();
-    this->span_.insert(span_.end(), range.begin(), range.end());
-}
 
 #endif // SPAN_HPP
