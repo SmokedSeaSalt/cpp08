@@ -5,6 +5,7 @@
 
 template <typename T> class MutantStack : public std::stack<T>
 {
+    //TODO make orthodox
     public:
         typedef typename std::stack<T>::container_type container_type;
         typedef typename container_type::iterator iterator;
