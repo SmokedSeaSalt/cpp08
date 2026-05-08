@@ -51,16 +51,9 @@ int Span::longestSpan()
     if (this->span_.size() <= 1)
         throw NotEnoughNumbers();
 
-    int max = INT_MIN;
-    int min = INT_MAX;
-    for (int x : span_)
-    {
-        if (x < min)
-            min = x;
-        if (x > max)
-            max = x;
-    }
-    return (max - min);
+    auto [min, max] = std::minmax_element(this->span_.begin(), this->span_.end());
+
+    return (*max - *min);
 }
 
 void Span::addRange(std::vector<int> range)
