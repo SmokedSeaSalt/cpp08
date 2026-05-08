@@ -30,12 +30,14 @@ template <typename T> MutantStack<T>::~MutantStack()
 
 }
 
-template <typename T> MutantStack<T>::MutantStack(const MutantStack& other)
+template <typename T> MutantStack<T>::MutantStack(const MutantStack& other) : std::stack<T>(other)
 {
-    (void)other;
 }
 
 template <typename T> MutantStack<T>& MutantStack<T>::operator=(const MutantStack<T>& other)
 {
-    (void)other;
+    if (*this == other)
+        return (*this);
+    this->c = other.c;
+    return (*this);
 }

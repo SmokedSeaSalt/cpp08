@@ -23,11 +23,11 @@ DEP = ${OBJ:.o=.d}
 ################################################################################
 
 all: $(NAME)
-	@printf "$(COLOUR_GREEN)Compilation done👍\n$(COLOUR_END)"
+	@printf "$(COLOUR_BLUE)Executable: $(NAME)\n$(COLOUR_END)"
 
 $(NAME): $(OBJ) Makefile
-	@printf "$(COLOUR_BLUE)Compiling executable: $(NAME)\n$(COLOUR_END)"
 	@$(CPP) $(CPPFLAGS) $(OBJ) -o $@
+	@printf "$(COLOUR_GREEN)Compilation done👍\n$(COLOUR_END)"
 
 $(BUILD_DIR)/%.o: %.cpp Makefile | $(BUILD_DIR)
 	@printf "$(COLOUR_BLUE)Compiling $@ \n$(COLOUR_END)"

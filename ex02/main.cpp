@@ -27,6 +27,14 @@ int main()
             ++it;
         }
         std::stack<int> s(mstack);
+
+        std::cout << C_YELLOW << "Default copy to stack\n" << C_END;
+        for (size_t i = 0; i < mstack.size(); i++)
+        {
+            std::cout << s.top() << std::endl;
+            s.pop();
+        }
+
     }
     std::cout << C_YELLOW << "Test list\n" << C_END;
     {
